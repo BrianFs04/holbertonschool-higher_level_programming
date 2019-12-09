@@ -1,5 +1,4 @@
 #include "list.h"
-#include <stdlib.h>
 /**
  * check_cycle - function that checks if a singly linked list has a cycle in it
  * @list: pointer to a list
