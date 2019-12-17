@@ -3,4 +3,4 @@ def print_list_integer(my_list=[]):
     i = 0
     while i < len(my_list):
         i += 1
-        print('{}'.format(i), end='\n')
+        print('{:d}'.format(i), end='\n')
