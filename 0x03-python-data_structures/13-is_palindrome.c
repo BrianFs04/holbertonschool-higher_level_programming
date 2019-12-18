@@ -31,7 +31,7 @@ int is_palindrome(listint_t **head)
 			cont++;
 			last = last->next;
 		}
-		if (last->n != last->n)
+		if (last->n != tmp->n)
 			return (0);
 		tmp = tmp->next;
 	}
