@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def weight_average(my_list=[]):
+    if not my_list:
+        return 0
     sums = 0
     sums2 = 0
     score = [[first*second for first, second in zip(elem, elem[1:])]
