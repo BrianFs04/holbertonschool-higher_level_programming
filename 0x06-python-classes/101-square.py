@@ -6,9 +6,9 @@ class Square:
         stri = ''
 
         if self.size == 0:
-            stri += ''
+            stri = ''
 
-        if (self.position[1] > 0):
+        for i in range(self.position[1]):
             stri += '\n'
 
         for hashy in range(self.size):
