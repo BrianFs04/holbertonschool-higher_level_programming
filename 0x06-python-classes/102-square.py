@@ -2,15 +2,6 @@
 class Square:
     '''class Square
     '''
-    def __init__(self, size=0):
-        '''Constructor
-        '''
-        if not isinstance(size, int):
-            raise TypeError('size must be an integer')
-        elif size < 0:
-            raise ValueError('size must be >= 0')
-        else:
-            self.__size = size
 
     def __eq__(self, other):
         return self.size == other.size
@@ -27,14 +18,19 @@ class Square:
     def __lt__(self, other):
         return self.size < other.size
 
-    def __eq__(self, other):
+    def __le__(self, other):
         return self.size <= other.size
+
+    def __init__(self, size=0):
+        '''Constructor
+        '''
+        self.__size = size
 
     @property
     def size(self):
         '''Getter
         '''
-        return self.__size
+        return(self.__size)
 
     @size.setter
     def size(self, value):
@@ -48,4 +44,6 @@ class Square:
             self.__size = value
 
     def area(self):
-        return (self.__size**2)
+        '''Returns the current square data
+        '''
+        return(self.size**2)
