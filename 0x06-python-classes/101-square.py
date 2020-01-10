@@ -6,7 +6,7 @@ class Square:
         stri = ''
 
         if self.size == 0:
-            print('')
+            stri += ''
 
         if (self.position[1] > 0):
             stri += '\n'
