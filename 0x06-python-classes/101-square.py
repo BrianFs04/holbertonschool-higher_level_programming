@@ -6,7 +6,7 @@ class Square:
         stri = ''
 
         if self.size == 0:
-            stri = ''
+            return stri
 
         for i in range(self.position[1]):
             stri += '\n'
