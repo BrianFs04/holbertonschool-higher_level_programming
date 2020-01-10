@@ -4,14 +4,21 @@ class Square:
     '''
     def __str__(self):
         stri = ''
+
+        if self.size == 0:
+            print('')
+
         if (self.position[1] > 0):
             stri += '\n'
+
         for hashy in range(self.size):
             stri += self.position[0] * ' '
             stri += self.size * '#'
             if hashy != (self.size - 1):
                 stri += '\n'
+
         return stri
+
     def __init__(self, size=0, position=(0, 0)):
         '''Constructor
         '''
