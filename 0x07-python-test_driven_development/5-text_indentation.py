@@ -13,13 +13,17 @@ def text_indentation(text):
     Prints a text with 2 new lines after each of these characters: ., ? and :
     '''
     if type(text) is not str:
-        raise TypeError('text must be a string')
+        raise TypeError("text must be a string")
 
-    for letters in range(len(text)):
-        if text[letters] is ' ' and text[letters - 1] in ('.', '?', ':'):
-            continue
-
-        print(text[letters], end='')
-
-        if text[letters] in ('.', '?', ':'):
-            print('\n')
+    after_new_line = False
+    for c in text:
+        if after_new_line:
+            if c == " ":
+                continue
+            after_new_line = False
+        if c == '.' or c == '?' or c == ':':
+            print(c)
+            print("")
+            after_new_line = True
+        else:
+            print(c, end="")
