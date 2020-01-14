@@ -24,6 +24,10 @@ class TestMaxInteger(unittest.TestCase):
             max_integer(14)
         with self.assertRaises(TypeError):
             max_integer([1, (2, 3)])
+        with self.assertRaises(TypeError):
+            max_integer(1, 4)
+        with self.assertRaises(NameError):
+            max_integer(s)
         with self.assertRaises(KeyError):
             max_integer({'first_key': 1, 'second_key': 2})
 
