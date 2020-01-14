@@ -1,0 +1,33 @@
+===========================================
+	How to Use 5-text_indentation.py
+===========================================
+
+Importing function from the module:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Now use it:
+    >>> text_indentation("Hello. What's your name?")
+    Hello.
+    <BLANKLINE>
+    What's your name?
+    <BLANKLINE>
+
+    >>> text_indentation("Hi. Brian")
+    Hi.
+    <BLANKLINE>
+    Brian
+
+    >>>text_indentation(".?:")
+    .
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+
+    >>> text_indentation("")
+
+    >>> text_indentation(1)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
