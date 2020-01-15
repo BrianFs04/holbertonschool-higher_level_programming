@@ -52,7 +52,7 @@ class Rectangle:
         ''' Public instance method that
         returns the rectangle perimeter
         '''
-        if self.width is 0 and self.height is 0:
+        if self.width is 0 or self.height is 0:
             return(0)
         else:
             return(self.width*2 + self.height*2)
