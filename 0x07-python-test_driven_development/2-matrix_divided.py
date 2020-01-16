@@ -29,8 +29,8 @@ def matrix_divided(matrix, div):
                 raise TypeError('matrix must be a matrix (list of lists) '
                                 'of integers/floats')
 
-    if len(matrix[0]) != len(matrix[1]):
-        raise TypeError('Each row of the matrix must have the same size')
+        if len(rows) != len(matrix[0]):
+            raise TypeError('Each row of the matrix must have the same size')
 
     new_matrix = [[float("{0:.2f}".format(elem/div)) for elem in rows]
                   for rows in matrix]
