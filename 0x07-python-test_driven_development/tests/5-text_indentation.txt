@@ -17,7 +17,7 @@ Now use it:
     <BLANKLINE>
     Brian
 
-    >>>text_indentation(".?:")
+    >>> text_indentation(".?:")
     .
     <BLANKLINE>
     ?
@@ -25,9 +25,12 @@ Now use it:
     :
     <BLANKLINE>
 
-    >>> text_indentation("")
-
     >>> text_indentation(1)
     Traceback (most recent call last):
         ...
     TypeError: text must be a string
+
+    >>> text_indentation()
+    Traceback (most recent call last):
+        ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
