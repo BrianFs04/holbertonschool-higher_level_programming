@@ -39,10 +39,8 @@ Now use it:
         ...
     ZeroDivisionError: division by zero
 
-    >>> matrix_divided([[4, 3], [6, 8]], float(inf))
-    Traceback (most recent call last):
-        ...
-    OverflowError: cannot convert a float infinity to integer
+    >>> matrix_divided([[4, 3], [6, 8]], float('inf'))
+    [[0.0, 0.0], [0.0, 0.0]]
 
     >>> matrix_divided(None, 2)
     Traceback (most recent call last):
