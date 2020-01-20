@@ -1,0 +1,49 @@
+===========================================
+	How to Use 7-base_geometry.py
+===========================================
+
+Importing function from the module:
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Now use it:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator('Hol', 'berton')
+    Traceback (most recent call last):
+        ...
+    TypeError: Hol must be an integer
+
+    >>> bg = BaseGeometry()
+    >>> bg.area()
+    Traceback (most recent call last):
+        ...
+    Exception: area() is not implemented
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator('int', -12)
+    Traceback (most recent call last):
+        ...
+    ValueError: int must be greater than 0
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator('int', 2, 3)
+    Traceback (most recent call last):
+        ...
+    TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+        ...
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator('Hol')
+    Traceback (most recent call last):
+        ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator('Hol', 2)
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator(2, 3)
