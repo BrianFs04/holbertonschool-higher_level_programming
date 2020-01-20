@@ -1,0 +1,97 @@
+===========================================
+	How to Use 1-my_list.py
+===========================================
+
+Importing function from the module:
+
+    >>> MyList = __import__('1-my_list').MyList
+
+Now use it:
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> my_list
+    [1, 4, 2, 3, 5]
+
+    >>> my_list1 = MyList()
+    >>> my_list1.append(2)
+    >>> my_list1.append(1)
+    >>> my_list1.sort()
+    >>> my_list1
+    [1, 2]
+
+    >>> my_list2 = MyList()
+    >>> my_list2
+    []
+
+    >>> my_list3 = MyList()
+    >>> my_list3.append(None)
+    >>> my_list3
+    [None]
+
+    >>> my_list4 = MyList()
+    >>> my_list4.append('H')
+    >>> my_list4.append('S')
+    >>> my_list4
+    ['H', 'S']
+
+    >>> my_list5 = MyList()
+    >>> my_list5.append((1, 2))
+    >>> my_list5.append('Holberton')
+    >>> my_list5.append(3)
+    >>> my_list5.sort()
+    Traceback (most recent call last):
+        ...
+    TypeError: unorderable types: str() < tuple()
+
+
+    >>> my_list6 = MyList()
+    >>> my_list6.append(float('inf'))
+    >>> my_list6.append(float('-inf'))
+    >>> my_list6
+    [inf, -inf]
+
+    >>> my_list7 = MyList()
+    >>> my_list7.append(-3)
+    >>> my_list7.append(-5)
+    >>> my_list7.append(9)
+    >>> my_list7.sort()
+    >>>	my_list7
+    [-5, -3, 9]
+
+    >>> my_list8 = MyList()
+    >>> my_list8.append(98)
+    >>> my_list8.append(98)
+    >>> my_list8.append(98)
+    >>> my_list8
+    [98, 98, 98]
+
+    >>> my_list9 = MyList()
+    >>> my_list9.append(0)
+    >>> my_list9.append(0.1)
+    >>> my_list9.append(0.2)
+    >>> my_list9.sort()
+    >>> my_list9
+    [0, 0.1, 0.2]
+
+    >>> my_list10 = MyList()
+    >>> my_list10.append(3)
+    >>> my_list10
+    [3]
+
+    >>> my_list11 = MyList()
+    >>> isinstance(my_list11, MyList)
+    True
+
+    >>> my_list12 = MyList()
+    >>> type(my_list12) == MyList
+    True
+
+    >>> issubclass(MyList, list)
+    True
+
+    >>> isinstance(MyList, list)
+    False
