@@ -11,10 +11,10 @@ load_from_json_file = __import__('8-load_from_json_file').load_from_json_file
 listy = []
 json_file = 'add_item.json'
 
-for args in sys.argv[1:]:
-    listy.append(args)
-
 if os.path.exists(json_file):
     load_from_json_file(json_file)
+
+for args in sys.argv[1:]:
+    listy.append(args)
 
 save_to_json_file(listy, json_file)
