@@ -122,3 +122,11 @@ Now use it:
     >>> my_list16.print_sorted()
     [[]]
 
+    >>> my_list17 = MyList()
+    >>> my_list17.append(30)
+    >>> my_list17.append(100)
+    >>> my_list17.append(20)
+    >>> my_list17.print_sorted()
+    [20, 30, 100]
+    >>> my_list17
+    [30, 100, 20]
