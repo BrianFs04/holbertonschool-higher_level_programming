@@ -130,3 +130,7 @@ Now use it:
     [20, 30, 100]
     >>> my_list17
     [30, 100, 20]
+
+    >>> my_list18 = MyList()
+    >>> my_list18.print_sorted()
+    []
