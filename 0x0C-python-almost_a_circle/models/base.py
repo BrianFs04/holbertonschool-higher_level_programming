@@ -2,8 +2,6 @@
 ''' Base class
 '''
 import json
-from models.square import Square
-from models.rectangle import Rectangle
 
 
 class Base:
@@ -52,7 +50,10 @@ class Base:
     def create(cls, **dictionary):
         ''' Returns an instance with all attributes
         '''
-        dummy = cls(1, 1)
+        if cls is Rectangle:
+            dummy = Rectangle(1, 1)
+        if cls is Square:
+            dummy = Square(1)
         dummy.update(**dictionary)
         return dummy
 
