@@ -50,6 +50,8 @@ class Base:
     def create(cls, **dictionary):
         ''' Returns an instance with all attributes
         '''
+        from models.square import Square
+        from models.rectangle import Rectangle
         if cls is Rectangle:
             dummy = Rectangle(1, 1)
         if cls is Square:
