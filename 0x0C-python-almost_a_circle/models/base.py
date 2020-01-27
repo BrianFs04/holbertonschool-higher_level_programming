@@ -50,9 +50,12 @@ class Base:
     def create(cls, **dictionary):
         ''' Returns an instance with all attributes
         '''
-        ins = cls(1, 1)
-        ins.update(**dictionary)
-        return ins
+        if cls.__name__ is Rectangle:
+            dummy = cls(1, 1)
+        if cls.__name__ is Square:
+            dummy = cls(1)
+        dummy.update(**dictionary)
+        return dummy
 
     @classmethod
     def load_from_file(cls):
