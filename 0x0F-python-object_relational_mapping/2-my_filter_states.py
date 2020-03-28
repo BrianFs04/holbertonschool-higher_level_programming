@@ -20,9 +20,10 @@ def mysqlconnect():
     cursor.execute("SELECT * FROM states WHERE name LIKE '{}'"
                    " COLLATE Latin1_General_CS;"
                    .format(sys.argv[4]))
-    states = cursor.fetchone()
+    states = cursor.fetchall()
 
-    print(states)
+    for state in states:
+        print(state)
 
     cursor.close()
     db_connection.close()
