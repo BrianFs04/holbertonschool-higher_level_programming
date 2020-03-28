@@ -19,7 +19,7 @@ def mysqlconnect():
 
     cursor = db_connection.cursor()
     cursor.execute("SELECT * FROM states WHERE name = %s", (sys.argv[4], ))
-    states = cursor.fetchone()
+    states = cursor.fetchall()
 
     for state in states:
         print(state)
