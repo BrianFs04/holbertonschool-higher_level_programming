@@ -17,7 +17,8 @@ def mysqlconnect():
     )
 
     cursor = db_connection.cursor()
-    cursor.execute("SELECT * FROM states WHERE name REGEXP '^N';")
+    cursor.execute("SELECT * FROM states WHERE name  LIKE '%N%' "
+                   "COLLATE Latin1_General_CS;")
     states = cursor.fetchall()
 
     for state in states:
