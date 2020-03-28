@@ -21,7 +21,8 @@ def mysqlconnect():
     cursor.execute("SELECT * FROM states WHERE name = %s", (sys.argv[4], ))
     states = cursor.fetchone()
 
-    print(states)
+    for state in states:
+        print(state)
 
     cursor.close()
     db_connection.close()
