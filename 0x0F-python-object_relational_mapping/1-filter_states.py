@@ -8,7 +8,6 @@ import sys
 
 
 if __name__ == '__main__':
-    db_connection = None
     db_connection = MySQLdb.connect(
         user=sys.argv[1],
         passwd=sys.argv[2],
@@ -22,6 +21,3 @@ if __name__ == '__main__':
 
     for state in states:
         print(state)
-
-    cursor.close()
-    db_connection.close()
