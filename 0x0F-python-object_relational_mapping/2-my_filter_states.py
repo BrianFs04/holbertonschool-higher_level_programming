@@ -17,7 +17,8 @@ def mysqlconnect():
     )
 
     cursor = db_connection.cursor()
-    cursor.execute("SELECT * FROM states WHERE name = '{}'"
+    cursor.execute("SELECT * FROM states WHERE name LIKE '{}'"
+                   " COLLATE Latin1_General_CS;"
                    .format(sys.argv[4]))
     states = cursor.fetchone()
 
