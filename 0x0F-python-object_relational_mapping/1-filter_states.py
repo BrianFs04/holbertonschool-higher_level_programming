@@ -7,7 +7,7 @@ import MySQLdb
 import sys
 
 
-def mysqlconnect():
+if __name__ == '__main__':
     db_connection = None
     db_connection = MySQLdb.connect(
         user=sys.argv[1],
@@ -25,6 +25,3 @@ def mysqlconnect():
 
     cursor.close()
     db_connection.close()
-
-if __name__ == '__main__':
-    mysqlconnect()
