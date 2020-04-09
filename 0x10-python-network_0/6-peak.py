@@ -1,8 +1,9 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """ Function to find a peak """
 
 
 def find_peak(list_of_integers):
+    """Find peak method"""
     if list_of_integers:
         length = len(list_of_integers)
         peak = list_of_integers[0]
