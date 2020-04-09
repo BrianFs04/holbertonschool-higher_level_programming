@@ -1,4 +1,3 @@
 #!/bin/bash
-# cript that sends a DELETE request to the URL passed as the first argument
-# and displays the body of the response
+# Sends a DELETE request to the URL passed as the first argument and displays it
 curl -sX DELETE "$1"
