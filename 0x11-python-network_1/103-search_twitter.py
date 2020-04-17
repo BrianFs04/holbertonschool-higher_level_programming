@@ -30,7 +30,7 @@ if __name__ == '__main__':
 
     search_heads = {
         "q": sys.argv[3],
-        "result_type": "recent",
+        "result_type": "mixed",
         "count": 5
     }
 
