@@ -12,7 +12,7 @@ if __name__ == '__main__':
     cont_encoded = base64.b64encode(cont.encode('utf-8'))
 
     heads = {
-        "Authorization": "Basic " + cont_encoded.decode('utf-8'),
+        "Authorization": "Basic {}".format(cont_encoded.decode('utf-8')),
         "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
     }
 
@@ -30,7 +30,7 @@ if __name__ == '__main__':
 
     search_heads = {
         "q": sys.argv[3],
-        "result_type": "mixed",
+        "result_type": "recent",
         "count": 5
     }
 
