@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-cript that prints the State object with the name passed as argument
+Script that prints the State object with the name passed as argument
 from the database hbtn_0e_6_usa via SQLAlchemy
 '''
 import sys
