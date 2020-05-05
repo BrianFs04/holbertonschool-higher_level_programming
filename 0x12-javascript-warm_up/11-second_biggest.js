@@ -8,9 +8,9 @@ if (!(process.argv[2]) || !(process.argv[3])) {
   for (let i = 2; i < process.argv.length; i++) {
     myVar.push(process.argv[i]);
   }
-  myVar.sort(function(x, y) {
+  myVar.sort(function (x, y) {
     return x - y;
   });
-  myVar.pop()
+  myVar.pop();
   console.log(parseInt(myVar.slice(-1)));
 }
