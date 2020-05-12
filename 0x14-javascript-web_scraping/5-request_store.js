@@ -12,7 +12,7 @@ const options = {
 
 function callback (error, response, body) {
   if (!error && response.statusCode === 200) {
-    fs.writeFileSync(process.argv[3], body, 'utf8')
+    fs.writeFileSync(process.argv[3], body, 'utf8');
   }
 }
 
