@@ -15,10 +15,11 @@ function callback (error, response, body) {
     const info = JSON.parse(body);
     for (const i in info.results) {
       const allChars = info.results[i].characters;
-      const chart = 'https://swapi-api.hbtn.io/api/people/18/';
-      if (allChars.includes(chart)) {
-        count++;
-      }
+      allChars.forEach(cha => {
+        if (cha.includes('/18/')) {
+          count++;
+        }
+      });
     }
     console.log(count);
   }
