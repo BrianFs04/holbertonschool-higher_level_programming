@@ -9,7 +9,6 @@ const options = {
   }
 };
 
-const newList = [];
 function callback (error, response, body) {
   if (!error && response.statusCode === 200) {
     const info = JSON.parse(body);
