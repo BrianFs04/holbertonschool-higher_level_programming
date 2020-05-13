@@ -42,7 +42,7 @@ function callback (error, response, body) {
       if (!error && response.statusCode === 200) {
         const info2 = JSON.parse(body);
         for (const i in info2.statuses) {
-          const stats = `${i.id} ${i.text} by ${i.user.name}`;
+          const stats = `[${i.id}] ${i.text} by ${i.user.name}`;
           console.log(stats);
         }
       }
