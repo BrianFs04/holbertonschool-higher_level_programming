@@ -33,7 +33,7 @@ function callback (error, response, body) {
     const authReqs = {
       url: searchTweets,
       headers:{
-        Autorization: 'Bearer ' + info
+        Authorization: 'Bearer ' + info
       },
       qs: searchHeads
     };
