@@ -8,7 +8,7 @@ def signal_handler(sig, frame):
     """Handles Ctrl+C"""
     print("File size: {}".format(size))
     for k, v in sorted(ordered.items()):
-        print(k, v)
+        print("{}: {}".format(k, v))
     sys.exit(0)
 
 if __name__ == "__main__":
@@ -28,5 +28,5 @@ if __name__ == "__main__":
         if i % 10 == 0:
             print("File size: {}".format(size))
             for k, v in sorted(ordered.items()):
-                print(k, v)
+                print("{}: {}".format(k, v))
         signal.signal(signal.SIGINT, signal_handler)
