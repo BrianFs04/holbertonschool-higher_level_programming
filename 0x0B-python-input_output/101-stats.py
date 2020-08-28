@@ -27,6 +27,6 @@ if __name__ == "__main__":
             ordered[st_code] = count
         if i % 10 == 0:
             print("File size {}".format(size))
-            for k, v in sorted(ordered.items(), reverse=True):
+            for k, v in sorted(ordered.items()):
                 print(k, v)
         signal.signal(signal.SIGINT, signal_handler)
