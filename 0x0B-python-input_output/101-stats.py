@@ -7,7 +7,7 @@ import sys
 def signal_handler(sig, frame):
     """Handles Ctrl+C"""
     print("File size {}".format(size))
-    for k, v in sorted(ordered.items(), reverse=True):
+    for k, v in sorted(ordered.items()):
         print(k, v)
     sys.exit(0)
 
